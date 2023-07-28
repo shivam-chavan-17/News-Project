@@ -68,6 +68,9 @@ searchButton.addEventListener('click', () => {
     const query = searchText.value;
     if (!query) return;
     fetchNews(query);
-    // currentSelectedNav ? classList.remove('active');
-    // currentSelectedNav = null;
+    if (currentSelectedNav) {
+        currentSelectedNav.classList.remove('active');
+        currentSelectedNav = null;
+    }
+    // currentSelectedNav ? classList.remove('active') : currentSelectedNav = null;
 });
